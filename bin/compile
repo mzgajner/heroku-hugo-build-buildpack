@@ -46,4 +46,4 @@ mv $CACHE_DIR/hugo $BUILD_DIR/hugo | indent
 echo "\n-----> Building the site"
 cd $BUILD_DIR
 mkdir -p public | indent
-./hugo -b BASE_URL -t HUGO_THEME| indent
+./hugo -b $BASE_URL -t $HUGO_THEME| indent
