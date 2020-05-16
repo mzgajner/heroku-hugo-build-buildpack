@@ -45,5 +45,4 @@ mv $CACHE_DIR/hugo $BUILD_DIR/hugo | indent
 # Build the site
 echo "\n-----> Building the site"
 cd $BUILD_DIR
-mkdir -p public | indent
-./hugo | indent
+./hugo -d public_html -v | indent
