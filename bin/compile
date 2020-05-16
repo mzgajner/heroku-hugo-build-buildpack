@@ -14,7 +14,7 @@ CACHE_DIR=$2
 ENV_DIR=$3
 
 # Default Hugo version
-DEFAULT_HUGO_VERSION="0.48"
+DEFAULT_HUGO_VERSION="0.70.0"
 export BASE_URL=$(cat "$ENV_DIR/BASE_URL")
 export HUGO_THEME=$(cat "$ENV_DIR/HUGO_THEME")
 
@@ -29,7 +29,7 @@ fi
 # Hugo URL ( download from GH builds )
 RELEASE_NAME=hugo_${HUGO_VERSION}_Linux-64bit
 FILE_NAME=${RELEASE_NAME}.tar.gz
-HUGO_PACKAGE=https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${FILE_NAME}
+HUGO_PACKAGE=https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${FILE_NAME}
 
 # Store the hugo package in the cache_dir ( persistent across builds )
 mkdir -p $CACHE_DIR
