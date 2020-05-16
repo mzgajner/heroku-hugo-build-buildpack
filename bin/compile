@@ -15,8 +15,6 @@ ENV_DIR=$3
 
 # Default Hugo version
 DEFAULT_HUGO_VERSION="0.70.0"
-export BASE_URL=$(cat "$ENV_DIR/BASE_URL")
-export HUGO_THEME=$(cat "$ENV_DIR/HUGO_THEME")
 
 # attempt to extract the HUGO_VERSION parameter form the Heroku configuration vars, fall back to the default version if unavailable
 if [ -d "$ENV_DIR" -a -e "$ENV_DIR/HUGO_VERSION" ]; then
@@ -48,4 +46,4 @@ mv $CACHE_DIR/hugo $BUILD_DIR/hugo | indent
 echo "\n-----> Building the site"
 cd $BUILD_DIR
 mkdir -p public | indent
-./hugo -b $BASE_URL | indent
+./hugo | indent
